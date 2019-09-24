@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name='vieewport' content="width=device-width, initial-sacel=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' href='https://bootswatch.com/4/yeti/bootstrap.min.css' > 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>
+            Movies Management System
+        </title>
+    </head>
+    <body>
+        <div class="container mt-4">
+            <div style="display: flex">
+                <div class="container mt-2" style="width: 50%">
+                    <header class="display-5 text-primary text-block">
+                        Search your favourite movies here.
+                    </header>
+                    <form id='search-form' class="mt-2">
+                        <div class="form-group">
+                            <input placeholder="Search movie here" type='text' id='search' style="padding: 7px; width: auto ">
+                            <input type='submit' value="Search Movie" class='btn btn-secondary' style="padding: 7px; height: auto; ">
+                        </div>
+                    </form>
+                </div>
+                <div class="container mt-2" style="width: 50%">
+                    <div class="form-group" id='add_movie'>
+                        Want to add Movie ?
+                        <button class="btn btn-primary">Click here</button>
+                    </div>
+                    <div id='add_movie_form'>
+                        <header class="display-5 text-primary text-center text-block ">
+                            Add Movie here.
+                        </header>
+                        <form id='movie-form' class="mt-2">
+                            <div class="form-group">
+                                <input required placeholder="Title" type='text' id='title' class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input required placeholder="Actor name" type='text' id='actor' class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input required placeholder="Date of release" type='date' id='date' class="form-control">
+                            </div>
+                            <input type='submit' value="Add Movie" class='btn btn-primary btn-block'>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <table class='table table-striped'>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>actor</th>
+                        <th>date</th>
+                        <th>delete record</th>
+                    </tr>
+                </thead>
+                <tbody id='movie-list'></tbody>
+            </table>
+        </div>
+        <script src="app.js"> </script> 
+    </body>
+</html>
